@@ -25,13 +25,10 @@ router.get('/', async (req, res) => {
            const mdata = await response.json();
            res.json(mdata);
         });
-
-
         await page.goto(url, {
           waitUntil: "load",
           timeout: 0,
         });
-        console.log("Page, :", page)
       });
     
   } catch (error) {
