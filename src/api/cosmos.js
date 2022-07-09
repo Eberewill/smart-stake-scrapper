@@ -5,7 +5,6 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   try {
     const url = 'https://7nkwv3z5t1.execute-api.us-east-1.amazonaws.com/prod/listData?type=valstats&frequencyNetwork=All&address=cosmosvaloper17mggn4znyeyg25wd7498qxl7r2jhgue8u4qjcq&key=2mwTEDr9zXJH323M&token=1657402061&app=ATOM'
-
     await puppeteer
       .launch({
         args: [
