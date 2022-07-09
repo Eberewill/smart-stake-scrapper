@@ -28,6 +28,8 @@ router.get('/', async (req, res) => {
           waitUntil: "load",
           timeout: 0,
         });
+
+        await browser.close();
       });
     
   } catch (error) {
