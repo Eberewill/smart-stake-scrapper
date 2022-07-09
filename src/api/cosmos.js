@@ -14,12 +14,10 @@ router.get('/', async (req, res) => {
       })
       .then(async (browser) => {
         const page = await browser.newPage();
-
         await page.setViewport({
           width: 1366,
           height: 768,
         });
-
         page.on("response", async (response) => {
            const mdata = await response.json();
            res.json(mdata);
@@ -28,7 +26,6 @@ router.get('/', async (req, res) => {
           waitUntil: "load",
           timeout: 0,
         });
-
       });
     
   } catch (error) {
