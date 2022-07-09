@@ -29,7 +29,6 @@ router.get('/', async (req, res) => {
           timeout: 0,
         });
 
-        await browser.close();
       });
     
   } catch (error) {
