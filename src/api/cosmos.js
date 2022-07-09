@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
 
     await puppeteer
       .launch({
-        headless: true,
+        headless: false,
       })
       .then(async (browser) => {
         const page = await browser.newPage();
